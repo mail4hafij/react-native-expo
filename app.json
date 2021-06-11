@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "uppsalabonetider",
+    "slug": "uppsalabonetider",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": "Many of us find difficulties to get the correct #prayertimes in Uppsala specially during the summer time. All the Apps show different time then the Uppsala Mosque. This is because, those Apps calculate prayer times based on other methods which is often not correct in Sweden when the Sun stays very long during the summer. The idea here is to build a simple mobile app to show prayer times based on Uppsala."
+  }
+}
