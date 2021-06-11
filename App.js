@@ -1,35 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import {
-  Table,
-  TableWrapper,
-  Row,
-  Rows,
-  Col,
-  Cols,
-  Cell,
-} from "react-native-table-component";
-import { APIURL, ACCESS_TOKEN } from "@env";
+import { Table, Row } from "react-native-table-component";
+import { APIURL, ACCESS_KEY } from "@env";
 
 const CONTENT = {
   tableColHead: ["", "Today", "Tomorrow"],
-  tableRowHead: ["Fajr", "Sunrise", "Zuhr", "Asr", "Maghrib", "Isha"],
-  tableData: [
-    ["1", "2"],
-    ["a", "b"],
-    ["1", "2"],
-    ["a", "b"],
-    ["1", "2"],
-    ["a", "b"],
-  ],
-  tableDataWithLabel: [
-    ["Fajr", "1", "2"],
-    ["Sunrise", "a", "b"],
-    ["Zuhr", "1", "2"],
-    ["Asr", "a", "b"],
-    ["Maghrib", "1", "2"],
-    ["Isha", "a", "b"],
-  ],
 };
 
 export default function App() {
@@ -39,7 +14,7 @@ export default function App() {
   const time = now.getHours() + ":" + now.getMinutes();
 
   useEffect(() => {
-    fetch(APIURL + "/" + ACCESS_TOKEN)
+    fetch(APIURL + "/" + ACCESS_KEY)
       .then((rsp) => rsp.json())
       .then((json) => setRsp(json))
       .catch((error) => alert(error))
@@ -71,32 +46,6 @@ export default function App() {
               textStyle={styles.text}
             />
           ))}
-
-          {/* {CONTENT.tableDataWithLabel.map((rowData, index) => (
-            <Row
-              key={index}
-              data={rowData}
-              flexArr={[2, 3, 3, 1]}
-              style={[styles.row, index % 2 && { backgroundColor: "#F7F6E7" }]}
-              textStyle={styles.text}
-            />
-          ))} */}
-
-          {/* <TableWrapper style={styles.wrapper}>
-            <Col
-              data={CONTENT.tableRowHead}
-              style={styles.title}
-              heightArr={[28, 28]}
-              textStyle={styles.text}
-            />
-
-            <Rows
-              data={CONTENT.tableData}
-              flexArr={[1, 1, 1]}
-              style={styles.row}
-              textStyle={styles.text}
-            />
-          </TableWrapper> */}
         </Table>
       )}
     </View>
