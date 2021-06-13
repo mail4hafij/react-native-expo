@@ -37,7 +37,7 @@ export default function Tabs() {
               }}
             >
               <Image
-                source={require("../assets/home.png")}
+                source={require("../assets/home1.png")}
                 resizeMode="contain"
                 sylte={{
                   width: 25,
