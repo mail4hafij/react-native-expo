@@ -46,7 +46,11 @@ export default function Tabs() {
                 }}
               />
               <Text
-                style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}
+                style={{
+                  color: focused ? "#e32f45" : "#748c94",
+                  fontSize: 12,
+                  fontWeight: "bold",
+                }}
               >
                 HOME
               </Text>
@@ -76,7 +80,11 @@ export default function Tabs() {
                 }}
               />
               <Text
-                style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}
+                style={{
+                  color: focused ? "#e32f45" : "#748c94",
+                  fontSize: 12,
+                  fontWeight: "bold",
+                }}
               >
                 INFO
               </Text>
