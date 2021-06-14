@@ -11,6 +11,7 @@ export default function InfoScreen() {
       <View style={styles.container}>
         <Text>Build with love by </Text>
         <Text h4>Mohammad Hafijur Rahman</Text>
+        <Text>mail4hafij@yahoo.com</Text>
       </View>
     </>
   );
