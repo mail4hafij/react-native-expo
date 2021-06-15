@@ -28,7 +28,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Many of us find difficulties to get the correct prayertimes in Uppsala specially during the summer time. All the Apps show different time then the Uppsala Mosque. This is because, those Apps calculate prayer times based on other methods which is often not correct in Sweden when the Sun stays very long during the summer. The idea here is to build a simple mobile app to show prayer times based on Uppsala.",
+    "description": "Many of us find difficulties to get the correct prayer times in Uppsala specially during the summer time. All the Apps show different times then the Uppsala Mosque. This is because, those Apps calculate prayer times based on other methods which is often not correct in Uppsala when the Sun stays very long during the summer. The idea here is to build a simple mobile app to show prayer times based on Uppsala, Sweden.",
     "githubUrl": "https://github.com/mail4hafij/react-native-expo"
   }
 }

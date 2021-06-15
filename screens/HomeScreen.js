@@ -40,9 +40,16 @@ export default function HomeScreen() {
   const time = now.getHours() + ":" + now.getMinutes();
 
   useEffect(() => {
-    fetch(APIURL + "/" + ACCESS_KEY)
+    fetch(APIURL + "/getPrayerTime/" + ACCESS_KEY)
       .then((rsp) => rsp.json())
-      .then((json) => setRsp(json))
+      .then((json) => {
+        if (json.error) {
+          setLoading(true);
+          alert(json.error);
+          return;
+        }
+        setRsp(json);
+      })
       .catch((error) => alert(error))
       .finally(() => setLoading(false));
   }, []);
@@ -113,8 +120,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    padding: 16,
-    paddingTop: 100,
+    padding: 20,
     backgroundColor: "#ffffff",
   },
   tableHead: { height: 40, backgroundColor: "#8fcbbc" },
