@@ -9,9 +9,26 @@ export default function InfoScreen() {
         <Text style={{ paddingTop: 20 }}>Information</Text>
       </View>
       <View style={styles.container}>
-        <Text>Build with love by </Text>
-        <Text h4>Mohammad Hafijur Rahman</Text>
-        <Text>mail4hafij@yahoo.com</Text>
+        <Text
+          style={{
+            padding: 20,
+            paddingBottom: 40,
+            textAlign: "justify",
+          }}
+        >
+          Many of us find difficulties to get the correct prayer times in
+          Uppsala specially during the summer time. All the Apps show different
+          times then the Uppsala Mosque. This is because, those Apps calculate
+          prayer times based on other methods which is often not correct in
+          Uppsala when the Sun stays very long during the summer. The idea here
+          is to build a simple mobile app to show prayer times based on Uppsala,
+          Sweden.
+        </Text>
+        <View style={{ alignItems: "center", justifyContent: "center" }}>
+          <Text>Build with love by </Text>
+          <Text h4>Mohammad Hafijur Rahman</Text>
+          <Text>mail4hafij@yahoo.com</Text>
+        </View>
       </View>
     </>
   );
@@ -27,8 +44,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
     backgroundColor: "#ffffff",
   },
 });
