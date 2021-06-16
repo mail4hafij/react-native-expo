@@ -22,32 +22,33 @@ export default function App() {
 
   useEffect(() => {
     registerForPushNotificationsAsync().then((token) => {
-      setExpoPushToken(token);
+      if (token !== "") {
+        setExpoPushToken(token);
 
-      // make a post req to server
-      // FormData doesn't have to be imported
-      const formData = new FormData();
-      formData.append("token", token);
+        // make a post req to server
+        // FormData doesn't have to be imported
+        const formData = new FormData();
+        formData.append("token", token);
 
-      const requestOptions = {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "multipart/form-data",
-        },
-        body: formData,
-      };
+        const requestOptions = {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "multipart/form-data",
+          },
+          body: formData,
+        };
 
-      fetch(APIURL + "/setToken/" + ACCESS_KEY, requestOptions)
-        .then((response) => response.json())
-        .then((json) => {
-          if (json.error) {
-            alert(json.error);
-            return;
-          }
-        })
-        .catch((error) => alert(error));
+        fetch(APIURL + "/setToken/" + ACCESS_KEY, requestOptions)
+          .then((response) => response.json())
+          .then((json) => {
+            if (json.error) {
+              alert(json.error);
+            }
+          })
+          .catch((error) => alert(error));
+      }
     });
 
     // This listener is fired whenever a notification is received while the app is foregrounded
@@ -76,7 +77,9 @@ export default function App() {
 }
 
 async function registerForPushNotificationsAsync() {
-  let token;
+  // let the token be empty
+  let token = "";
+
   if (Constants.isDevice) {
     const { status: existingStatus } =
       await Notifications.getPermissionsAsync();
@@ -86,12 +89,14 @@ async function registerForPushNotificationsAsync() {
       finalStatus = status;
     }
     if (finalStatus !== "granted") {
-      // alert("Failed to get push token for push notification!");
-      return;
+      // Failed to get push token for push notification
+      // Return an empty token instead of undefined.
+      return token;
     }
+    // Here we should get a successful token
     token = (await Notifications.getExpoPushTokenAsync()).data;
   } else {
-    alert("Must use physical device for Push Notifications");
+    // alert("Must use physical device for Push Notifications");
   }
 
   if (Platform.OS === "android") {

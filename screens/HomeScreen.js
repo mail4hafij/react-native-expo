@@ -46,12 +46,12 @@ export default function HomeScreen() {
         if (json.error) {
           setLoading(true);
           alert(json.error);
-          return;
+        } else {
+          setRsp(json);
+          setLoading(false);
         }
-        setRsp(json);
       })
-      .catch((error) => alert(error))
-      .finally(() => setLoading(false));
+      .catch((error) => alert(error));
   }, []);
 
   return (

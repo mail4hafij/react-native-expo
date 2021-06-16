@@ -20,9 +20,8 @@ export default function InfoScreen() {
           Uppsala specially during the summer time. All the Apps show different
           times then the Uppsala Mosque. This is because, those Apps calculate
           prayer times based on other methods which is often not correct in
-          Uppsala when the Sun stays very long during the summer. The idea here
-          is to build a simple mobile app to show prayer times based on Uppsala,
-          Sweden.
+          Uppsala when the Sun stays very long during the summer. So here is a
+          simple mobile app to show prayer times based on Uppsala, Sweden.
         </Text>
         <View style={{ alignItems: "center", justifyContent: "center" }}>
           <Text>Build with love by </Text>
