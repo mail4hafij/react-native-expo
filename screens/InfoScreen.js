@@ -26,7 +26,7 @@ export default function InfoScreen() {
         <View style={{ alignItems: "center", justifyContent: "center" }}>
           <Text>Build with love by </Text>
           <Text h4>Mohammad Hafijur Rahman</Text>
-          <Text>mail4hafij@yahoo.com</Text>
+          <Text>mail4hafij@gmail.com</Text>
         </View>
       </View>
     </>
