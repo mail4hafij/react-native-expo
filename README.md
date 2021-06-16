@@ -4,7 +4,7 @@ Many of us find difficulties to get the correct prayer times in Uppsala speciall
 <img src="/assets/demo.png" />
 
 ## Technology
-I am using expo framework to build this simple react-native App. The server side API is written in PHP which is not shared in this repo. You can access my API server at https://uppsalabonetider.se/api/getPrayerTime/8ade6fdba65a414e87d7791d1f9a2dc6
+I am using expo framework to build this simple react-native App. The server side API is written in PHP which is not shared in this repo. You can access my API server to get the prayer times for today and tomorrow, GET => https://uppsalabonetider.se/api/getPrayerTime/8ade6fdba65a414e87d7791d1f9a2dc6
 
 Ofcourse, you can setup your own API server and return some dummy data as following - 
 
@@ -20,6 +20,7 @@ Ofcourse, you can setup your own API server and return some dummy data as follow
   "time: "14:15"
 }
 ```
+I also run a cron job in PHP to send out push notificaitons. 
 
 ## Demo 
 Find the expo link https://expo.io/@mail4hafij/uppsalabonetider
