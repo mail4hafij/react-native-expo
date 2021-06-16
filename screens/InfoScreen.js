@@ -19,7 +19,7 @@ export default function InfoScreen() {
           Many of us find difficulties to get the correct prayer times in
           Uppsala specially during the summer time. All the Apps show different
           times then the Uppsala Mosque. This is because, those Apps calculate
-          prayer times based on other methods which is often not correct in
+          prayer times based on other methods which are often not correct in
           Uppsala when the Sun stays very long during the summer. So here is a
           simple mobile app to show prayer times based on Uppsala, Sweden.
         </Text>
