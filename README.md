@@ -27,4 +27,4 @@ I also run a cron job in PHP to send out push notificaitons.
 
 ## Demo
 
-Find the expo link https://expo.io/@mail4hafij/uppsalabonetider
+Find the expo link https://expo.io/@mail4hafij/react-native-expo
