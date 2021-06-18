@@ -6,7 +6,9 @@ Many of us find difficulties to get the correct prayer times in Uppsala speciall
 
 ## Technology
 
-I am using expo framework to build this simple react-native App. The server side API is written in PHP which is not shared in this repo. You can access my API server to get the prayer times for today and tomorrow, GET => https://uppsalabonetider.se/api/getPrayerTime/8ade6fdba65a414e87d7791d1f9a2dc6
+I am using expo framework to build this simple react-native App. The server side API is written in PHP which is not shared in this repo. 
+
+You can access my API server to get the prayer times for today and tomorrow, GET => https://uppsalabonetider.se/api/getPrayerTime/8ade6fdba65a414e87d7791d1f9a2dc6 
 
 Ofcourse, you can setup your own API server and return some dummy data as following -
 
@@ -22,9 +24,8 @@ Ofcourse, you can setup your own API server and return some dummy data as follow
   "time: "14:15"
 }
 ```
+You can try it on a real device from expo go client. Find the expo link https://expo.io/@mail4hafij/react-native-expo
 
-I also run a cron job in PHP to send out push notificaitons.
+Receiving push notification mechanism is implemented in the code. If you want to test push notificaiton try the expo push notificaiton tool here https://expo.io/notifications. You will need to provide expo push notificaiton token which you will find in the console log when a real device is connected to your local expo server.
 
-## Demo
-
-Find the expo link https://expo.io/@mail4hafij/react-native-expo
+ENJOY!
