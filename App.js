@@ -3,7 +3,6 @@ import * as Notifications from "expo-notifications";
 import React, { useState, useEffect, useRef } from "react";
 import { Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { APIURL, ACCESS_KEY } from "@env";
 import Tabs from "./navigation/Tabs";
 
 Notifications.setNotificationHandler({
@@ -24,30 +23,7 @@ export default function App() {
     registerForPushNotificationsAsync().then((token) => {
       if (token !== "") {
         setExpoPushToken(token);
-
-        // make a post req to server
-        // FormData doesn't have to be imported
-        const formData = new FormData();
-        formData.append("token", token);
-
-        const requestOptions = {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "multipart/form-data",
-          },
-          body: formData,
-        };
-
-        fetch(APIURL + "/setToken/" + ACCESS_KEY, requestOptions)
-          .then((response) => response.json())
-          .then((json) => {
-            if (json.error) {
-              alert(json.error);
-            }
-          })
-          .catch((error) => alert(error));
+        console.log(token);
       }
     });
 
@@ -96,7 +72,7 @@ async function registerForPushNotificationsAsync() {
     // Here we should get a successful token
     token = (await Notifications.getExpoPushTokenAsync()).data;
   } else {
-    // alert("Must use physical device for Push Notifications");
+    alert("Must use physical device for Push Notifications");
   }
 
   if (Platform.OS === "android") {
