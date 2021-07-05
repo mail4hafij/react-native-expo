@@ -29,3 +29,6 @@ You can try it on a real device from expo go client. Find the expo link https://
 Receiving push notification mechanism is implemented in the code. If you want to test push notificaiton try the expo push notificaiton tool here https://expo.io/notifications. You will need to provide expo push notificaiton token which you will find in the console log when a real device is connected to your local expo server.
 
 ENJOY!
+
+## Real APP in Google Play Store
+With extra features the App is now listed in Google Play Store - Download the App here https://play.google.com/store/apps/details?id=com.mail4hafij.uppsalabonetider
