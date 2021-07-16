@@ -30,5 +30,9 @@ Receiving push notification mechanism is implemented in the code. If you want to
 
 ENJOY!
 
-## Real APP in Google Play Store
-With extra features the App is now listed in Google Play Store - Download the App here https://play.google.com/store/apps/details?id=com.mail4hafij.uppsalabonetider
+## Real APP in Google Play Store and Apple App Store
+With extra features the App is now listed both in Google Play Store and Apple App Store. Download the App here 
+
+Google play store: https://play.google.com/store/apps/details?id=com.mail4hafij.uppsalabonetider
+
+Apple App store: https://apps.apple.com/se/app/uppsala-b%C3%B6netider/id1576197996
