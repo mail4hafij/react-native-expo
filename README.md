@@ -30,7 +30,7 @@ Receiving push notification mechanism is implemented in the code. If you want to
 
 ENJOY!
 
-## Real APP in Apple App Store and Google Play Store
+## Download this APP in Apple App Store and Google Play Store
 With extra features the App is now listed both in Google Play Store and Apple App Store. Download the App here 
 
 Apple App store: https://apps.apple.com/se/app/uppsala-b%C3%B6netider/id1576197996
