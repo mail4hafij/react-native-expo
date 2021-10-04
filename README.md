@@ -1,4 +1,4 @@
-# react-native-expo
+# react-native-expo-UppsalaBönetiderApp
 
 Many of us find difficulties to get the correct prayer times in Uppsala specially during the summertime. All the Apps show different times then the Uppsala Mosque. This is because, those Apps calculate prayer times based on other methods which are often not correct in Uppsala. So here is a simple mobile app to show prayer times based on Uppsala, Sweden. The data are already collected. I am exposing those data through an API server written in PHP.
 
